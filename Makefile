@@ -6,5 +6,5 @@ image:
 
 push: image
 	docker push $(IMAGE)
-	docker tag $(IMAGE) $(IMAGE):$(VERSION)
+	docker tag -f $(IMAGE) $(IMAGE):$(VERSION)
 	docker push $(IMAGE):$(VERSION)
